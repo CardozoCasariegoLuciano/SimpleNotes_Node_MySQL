@@ -1,0 +1,17 @@
+CREATE DATABASE simpleNotes;
+
+USE simpleNotes;
+
+CREATE TABLE User (
+	u_id INT PRIMARY KEY AUTO_INCREMENT,
+	u_name VARCHAR(100) NOT NULL,
+	u_password VARCHAR(100) NOT NULL,
+	u_email VARCHAR(100) NOT NULL 
+);
+
+CREATE TABLE Note (
+	n_id INT PRIMARY KEY AUTO_INCREMENT,
+	n_title VARCHAR(100) NOT NULL,
+	n_description VARCHAR(500) NOT NULL,
+	n_authorID INT NOT NULL 
+);
