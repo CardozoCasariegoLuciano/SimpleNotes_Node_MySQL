@@ -13,6 +13,7 @@ app.use(express.urlencoded({extended: true}))
 
 //routes
 
-
+app.use("/register", require("./routes/register.routes"))
+app.use("/login", require("./routes/login.routes"))
 
 module.exports = app
