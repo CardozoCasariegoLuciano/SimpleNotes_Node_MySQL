@@ -15,8 +15,16 @@ const note_exceptions = {
 
 }
 
+
+const token_exceptions = {
+	no_valid_token : (err) => ({Mensaje: "Usuario no autorizado", Error: err}),
+}
+
+
+
 module.exports = {
 	slq_exceptions,
 	user_exceptions,
 	note_exceptions,
+	token_exceptions,
 };
