@@ -1,5 +1,5 @@
 const connection = require("../database/DB_conection");
-const { user_exceptions, slq_exceptions } = require("../helpers/exceptions");
+const { user_exceptions, generic_exceptions} = require("../helpers/exceptions");
 const user_Validation = require("./validations/user_validation");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
@@ -28,7 +28,7 @@ async function register(req, res) {
 		};
 
 		connection.query(sql, newUser, (err, result) => {
-			if (slq_exceptions.isUser_repited(err)) {
+			if (user_exceptions.isUser_repited(err)) {
 				res.status(400).json(user_exceptions.user_already_exists(email));
 				return;
 			}
@@ -53,7 +53,7 @@ async function register(req, res) {
 			});
 		});
 	} else {
-		res.status(400).json(user_exceptions.badDataTypes(error));
+		res.status(400).json(generic_exceptions.badDataTypes(error));
 	}
 }
 

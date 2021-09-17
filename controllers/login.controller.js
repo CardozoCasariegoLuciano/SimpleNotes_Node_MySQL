@@ -2,7 +2,7 @@ const connection = require("../database/DB_conection");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const user_validation = require("./validations/user_validation");
-const { user_exceptions } = require("../helpers/exceptions");
+const { user_exceptions, generic_exceptions } = require("../helpers/exceptions");
 
 async function login(req, res) {
 	const { email, password } = req.body;
@@ -45,7 +45,7 @@ async function login(req, res) {
 			});
 		});
 	} else {
-		res.status(400).json(user_exceptions.badDataTypes(error));
+		res.status(400).json(generic_exceptions.badDataTypes(error));
 	}
 }
 
