@@ -15,7 +15,7 @@
 *  **Paso 5:**  Crear la base de datos y la tabla correspondiente tal como indica el archivo 
 database > DB_construction.sql
 *  **Paso 6:**  en el archivo .env ingresar en los campos "DB_user" y "DB_password" su usuario y contraseña para conectarse a la base de datos
-* **Paso 5:** Iniciar el proyecto usando <code>node index.js</code>
-* **Paso 6:** Probar los endpoints usando Postman, Insomnia o similares!
+* **Paso 7:** Iniciar el proyecto usando <code>node index.js</code>
+* **Paso 8:** Probar los endpoints usando Postman, Insomnia o similares!
 
 ___
