@@ -1,5 +1,7 @@
 const generic_exceptions = {
 	badDataTypes: (error) =>( { Mensaje: "Error con los datos ingresados", error }),
+	invalid_id: {Mensaje: "ID no valida"},
+	
 };
 
 
@@ -9,7 +11,6 @@ const user_exceptions = {
 	loginFailed: {Mensaje: "Email o contraseña incorrectos"},
 	user_not_found : {Mensaje: "Usuario no encontrado"},
 	isUser_repited: (err) => (err && err.code === "ER_DUP_ENTRY"),
-	invalid_id: {Mensaje: "ID no valida"},
 };
 
 
