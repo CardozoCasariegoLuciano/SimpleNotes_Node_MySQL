@@ -15,6 +15,7 @@ const user_exceptions = {
 
 
 const note_exceptions = {
+	note_not_found : {Mensaje: "Nota no encontrada"},
 
 }
 
